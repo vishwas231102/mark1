@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(210, 175, 125);">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/login.css">
+    
+</head>
+<body>
+    <form action="/" method="post" id="form">
+        <h3 id="header">Login</h1>
+        
+        <label for="username" style="font-size: medium; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;">Username</label>
+        <input type="text" placeholder="Enter your username" name="username" id="username" minlength="8" maxlength="15" required ><br>
+        
+        <label for="password" style="font-size: medium; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;">Password</label>
+        <input type="text" placeholder="Enter your password" name="password" id="password" minlength="8" maxlength="15" required><br>
+        
+        <button type="submit">Sign In</button>
+
+        <a href="/sign_up" style="margin-top: 1vw;margin-bottom: 1vw; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+        font-size: small;color: red; font-size: 0.8vw; font-weight: bold;">New User ?</a>
+    </form>
+    {% if message != '' %}
+    <script> { alert('{{ message }}'); } </script>
+    {% endif %}
+</body>
+</html>

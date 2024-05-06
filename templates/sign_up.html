@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(210, 175, 125);">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/static/sign_up.css">
+</head>
+<body>
+    <form action="/sign_up" method="post" id="form">
+        <h3 id="header">Sign Up</h1>
+        
+        <label for="first_name" style="font-size: medium; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;">First Name</label>
+        <input type="text" placeholder="Enter your first name" name="first_name" id="first_name" minlength="3" maxlength="15" required ><br>
+        
+        <label for="email" style="font-size: medium; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;">Email</label>
+        <input type="text" placeholder="Enter your email address" name="email" id="email" minlength="8" maxlength="25" required ><br>
+        
+        <label for="username" style="font-size: medium; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;">Username</label>
+        <input type="text" placeholder="Enter your username" name="username" id="username" minlength="8" maxlength="15" required ><br>
+        
+        <label for="password" style="font-size: medium; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;">Password</label>
+        <input type="text" placeholder="Enter your password" name="password" id="password" minlength="8" maxlength="15" required><br>
+        
+        <button type="submit">Sign Up</button>
+
+        <a href="/" style="margin-top: 1vw;margin-bottom: 1vw; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+        font-size: small;color: red; font-size: 0.8vw; font-weight: bold;">Go back ?</a>
+    </form>
+    {% if message != '' %}
+    <script> { alert('{{ message }}'); } </script>
+    {% endif %}
+</body>
+</html>
